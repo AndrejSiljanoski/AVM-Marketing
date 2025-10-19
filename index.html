@@ -154,6 +154,7 @@ footer .brand{font-weight:800;color:#111}
 </head>
 
 <body>
+
 <header>
   <div class="container nav">
     <div class="logo"><img src="avmimages/avmlogo.jpg" alt="AVM Marketing Logo"></div>
@@ -170,7 +171,164 @@ footer .brand{font-weight:800;color:#111}
   </div>
 </header>
 
-<!-- (All your sections: home, products, about, book, contact, footer stay unchanged) -->
+<section id="home" data-lift>
+  <div class="container hero">
+    <div>
+      <div class="hero-card">
+        <div class="eyebrow">Social media marketing agency</div>
+        <h1>Grow revenue with high-ROI ads, email, and lead generation.</h1>
+        <p class="lead">AVM is your partner for performance marketing. We plan and run winning campaigns, nurture leads by email and automation, and build brand awareness that converts.</p>
+        <div class="cta-row">
+          <a class="btn alt" href="#book">Book a call</a>
+          <a class="btn" href="#products">Explore packages</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="badge"><span class="dot"></span> Results-driven. Transparent. Scalable.</div>
+    </div>
+  </div>
+</section>
+
+<section id="products" data-lift>
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">What we offer</span>
+      <h2>Packages designed to meet you where you are</h2>
+      <p>Choose a package that fits your growth stage. Every plan includes strategy, setup, optimization, and reporting.</p>
+    </div>
+    <div class="grid cols-3">
+      <article class="card">
+        <span class="pill">Standard</span>
+        <h3>Standard Package</h3>
+        <ul class="features">
+          <li>One ad campaign (Facebook/Instagram or LinkedIn)</li>
+          <li>Email marketing setup and sending</li>
+          <li>Conversion tracking and monthly report</li>
+          <li>Creative guidance and copywriting</li>
+        </ul>
+        <div class="cta"><a class="btn alt" href="#book">Get started</a></div>
+      </article>
+      <article class="card">
+        <span class="pill">Pro</span>
+        <h3>Pro Package</h3>
+        <ul class="features">
+          <li>Several ad campaigns across key audiences</li>
+          <li>Email marketing with segmentation</li>
+          <li>Lead generation funnels and landing pages</li>
+          <li>A/B testing and weekly optimization</li>
+          <li>Detailed analytics dashboard</li>
+        </ul>
+        <div class="cta"><a class="btn alt" href="#book">Talk to us</a></div>
+      </article>
+      <article class="card">
+        <span class="pill">Elite</span>
+        <h3>Elite Package</h3>
+        <ul class="features">
+          <li>Ad campaigns on multiple platforms</li>
+          <li>Email marketing, automation, and lead generation</li>
+          <li>Marketing content creation</li>
+          <li>Marketing strategy consulting</li>
+          <li>Advanced attribution and reporting</li>
+        </ul>
+        <div class="cta"><a class="btn alt" href="#book">Scale with AVM</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" data-lift>
+  <div class="container">
+    <div class="section-title" style="text-align:left">
+      <span class="eyebrow">About us</span>
+      <h2>Based in North Macedonia, delivering global impact</h2>
+    </div>
+    <div class="about-wrap">
+      <div class="about-box">
+        <p>We are AVM — a marketing agency that helps businesses increase revenue by generating new leads, growing reach, and establishing strong brand awareness. Our team blends strategy, creative, and technology to build predictable growth engines.</p>
+        <div class="kpis">
+          <div class="kpi"><b>Leads</b><small>Predictable pipelines</small></div>
+          <div class="kpi"><b>Reach</b><small>Audience expansion</small></div>
+          <div class="kpi"><b>Brand</b><small>Trust and awareness</small></div>
+        </div>
+      </div>
+      <div class="about-box">
+        <h3>How we work</h3>
+        <ul class="features">
+          <li>Audit, goals, and channel strategy</li>
+          <li>Creative and copy aligned to your brand</li>
+          <li>Iterative testing to maximize ROI</li>
+          <li>Clear reporting and weekly communication</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn alt" href="#book">Book a call</a>
+          <a class="btn" href="#products">View packages</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" data-lift>
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Let’s talk</span>
+      <h2>Book a call with AVM</h2>
+      <p>Tell us about your goals and we’ll propose the right plan.</p>
+    </div>
+    <div class="book">
+      <form class="form" onsubmit="submitForm(event)">
+        <div class="row two">
+          <div><label for="name">Full name</label><input id="name" name="name" placeholder="Jane Doe" required></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@company.com" required></div>
+        </div>
+        <div class="row two" style="margin-top:12px">
+          <div><label for="company">Company</label><input id="company" name="company" placeholder="Company name"></div>
+          <div><label for="package">Interested in</label>
+            <select id="package" name="package">
+              <option>Standard Package</option>
+              <option>Pro Package</option>
+              <option>Elite Package</option>
+              <option>Custom</option>
+            </select>
+          </div>
+        </div>
+        <div class="row two" style="margin-top:12px">
+          <div><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
+          <div><label for="time…time" type="time"></div>
+        </div>
+        <div style="margin-top:12px">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Describe your goals or project"></textarea>
+        </div>
+        <div style="margin-top:18px"><button class="btn alt" type="submit">Send Request</button></div>
+      </form>
+      <div class="aside">
+        <h3>What you’ll get</h3>
+        <ul class="bullets">
+          <li><span class="tick"></span> A free discovery call</li>
+          <li><span class="tick"></span> Clear growth strategy proposal</li>
+          <li><span class="tick"></span> Transparent pricing & timeline</li>
+        </ul>
+        <p style="margin-top:20px">We typically respond within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-lift>
+  <div class="container contact">
+    <div class="email-card">
+      <h3>Contact us</h3>
+      <p>Email: <a href="mailto:contact@avm.com">contact@avm.com</a></p>
+      <p>Phone: +389 71 123 456</p>
+    </div>
+    <div class="card">
+      <h3>Locations</h3>
+      <p>Skopje, North Macedonia<br>Prilep, North Macedonia<br>Bitola, North Macedonia</p>
+    </div>
+  </div>
+</section>
 
 <footer data-lift>
   <div class="container foot">
