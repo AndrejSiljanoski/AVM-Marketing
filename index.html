@@ -295,7 +295,7 @@ footer .brand{font-weight:800;color:#111}
         </div>
         <div class="row two" style="margin-top:12px">
           <div><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
-          <div><label for="time…time" type="time"></div>
+          <div><label for="time">Preferred time</label><input id="time" name="time" type="time"></div>
         </div>
         <div style="margin-top:12px">
           <label for="message">Message</label>
@@ -356,7 +356,6 @@ function submitForm(e){
 }
 document.getElementById('year').textContent=new Date().getFullYear();
 
-// Scroll lift animation
 function onScrollLift(){
   document.querySelectorAll('[data-lift]').forEach(el=>{
     const rect=el.getBoundingClientRect();
@@ -369,18 +368,13 @@ window.addEventListener('scroll', onScrollLift);
 onScrollLift();
 </script>
 
-<!-- Start of ChatBot (www.chatbot.com) code -->
+<!-- === Chatbase Chatbot Integration (AVM Chatbot) === -->
 <script>
-  window.__ow = window.__ow || {};
-  window.__ow.organizationId = "a4fb827a-7f12-4d6c-805e-9a6854de8d7b";
-  window.__ow.template_id = "2ee9db2e-e751-40b7-9181-2693327fd310";
-  window.__ow.integration_name = "manual_settings";
-  window.__ow.product_name = "chatbot";  
-  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="TEaFMfRn_X5LA_kXC5aOe";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
-<noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
-<!-- End of ChatBot code -->
+<!-- === End of Chatbase Chatbot === -->
 
 </body>
 </html>
+
 
